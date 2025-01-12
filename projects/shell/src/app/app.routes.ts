@@ -1,32 +1,18 @@
 import { loadRemoteModule } from '@angular-architects/module-federation';
 import { Routes } from '@angular/router';
 
-export const Router_Configs: Routes = [
+export const APP_ROUTES: Routes = [
     // {
-    //     path: '',
-    //     pathMatch: 'full',
-    //     // redirectTo: 'main'
-    // },
-    // remote entry routes
-    // {
-    //     path: 'remote-app',
-    //     loadComponent: () =>
+    //     path: 'main',
+    //     loadChildren: () =>
     //         loadRemoteModule({
     //             type: 'module',
-    //             remoteEntry: 'http://127.0.0.1:8080/remoteEntry.js',
-    //             exposedModule: './Component',
-    //         }).then((m) => m.HomeComponent)
-    // },
-    {
-        path: 'main',
-        loadChildren: () =>
-            loadRemoteModule({
-                type: 'module',
-                remoteEntry: 'http://127.0.0.1:8080/remoteEntry.js',
-                exposedModule: './routes',
-            }).then((m) => {
-                console.log(m);
-                return m.routes
-            })
-    }
+    //             remoteEntry: 'http://localhost:4201/remoteEntry.js',
+    //             // rules, if expose routes, the name must be routes, if expose component, the name must be component
+    //             exposedModule: './routes',
+    //         }).then((m) => {
+    //             console.log(m);
+    //             return m.routes
+    //         })
+    // }
 ];

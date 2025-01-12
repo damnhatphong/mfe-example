@@ -2,7 +2,7 @@
 
 import { loadRemoteModule } from '@angular-architects/module-federation';
 import { Routes } from '@angular/router';
-import { Router_Configs } from '../app.routes';
+import { APP_ROUTES } from '../app.routes';
 import { CustomManifest } from './config';
 
 export function buildRoutes(options: CustomManifest): Routes {
@@ -20,5 +20,5 @@ export function buildRoutes(options: CustomManifest): Routes {
         }
     });
 
-    return [...Router_Configs, ...lazyRoutes];
+    return [...APP_ROUTES, ...lazyRoutes];
 }

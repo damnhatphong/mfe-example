@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "main": "ng serve main-app --port 4201",
-    "shell": "ng serve shell --port 4200"
+    "main": "ng serve main-app --port 4201 --no-live-reload",
+    "shell": "ng serve shell --port 4200 --no-live-reload"
   },
   "private": true,
   "dependencies": {
